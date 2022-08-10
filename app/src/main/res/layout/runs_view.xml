@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:background="#DFDFDF"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="20px"
+        android:paddingLeft="20px"
+        android:paddingTop="20px"
+        android:paddingRight="20px"
+        android:paddingBottom="20px">
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="15px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ToggleButton"
+            android:textOff="☆"
+            android:textOn="⭐"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="date"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="time"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="distance"
+            android:textSize="18sp" />
+
+</LinearLayout>

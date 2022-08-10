@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mdp_cw2">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MDP_CW2">
+        <activity android:name=".MapActivity"></activity>
+
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${mapsApiKey}" />
+
+        <activity android:name=".TrackingActivity" android:configChanges="orientation|screenSize" android:launchMode="singleInstance" android:screenOrientation="portrait"/>
+        <activity android:name=".AllRunsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".TrackerService"
+            android:foregroundServiceType="location"
+            android:launchMode="singleInstance" />
+
+
+        <provider
+            android:authorities="com.example.mdp_cw2.RunContentProvider"
+            android:multiprocess="true"
+            android:exported="true"
+            android:name="com.example.mdp_cw2.RunContentProvider">
+        </provider>
+    </application>
+
+</manifest>
